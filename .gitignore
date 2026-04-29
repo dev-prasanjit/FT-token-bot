@@ -1,0 +1,5 @@
+.env
+screenshots/
+token_bot.log
+__pycache__/
+*.pyc
