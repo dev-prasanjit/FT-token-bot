@@ -1,0 +1,19 @@
+[Unit]
+Description=Tradetron Flattrade Token Generator Bot
+After=network.target
+
+[Service]
+Type=simple
+User=opc
+WorkingDirectory=/home/opc/tradetron-token-bot
+ExecStart=/usr/bin/python3 /home/opc/tradetron-token-bot/bot.py
+Restart=always
+RestartSec=10
+Environment=HEADLESS=true
+
+# Logging
+StandardOutput=append:/home/opc/tradetron-token-bot/token_bot.log
+StandardError=append:/home/opc/tradetron-token-bot/token_bot.log
+
+[Install]
+WantedBy=multi-user.target
